@@ -1,0 +1,13 @@
+---
+- name: installation operation
+  ansible.builtin.apt:
+    name: "{{ install }}"
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: installation operation (RedHat)
+  ansible.builtin.yum:
+    name: "{{ install }}"
+    state: present
+  when: ansible_os_family == "RedHat"
+

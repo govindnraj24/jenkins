@@ -1,0 +1,22 @@
+---
+- hosts: all
+  user: ansible
+  become: yes
+  gather_facts: yes
+  vars:
+    s_path: sample.html
+    d_path: /home/ansible/
+  tasks:
+    - name: copy the file
+      copy:
+        src: "/home/ansible/a_project1/dummy_files/{{ item }}"
+        dest: "{{ d_path }}"
+#      when: ansible_facts['os_family']=="Debian"
+#     - name: py version 
+#       debug:
+#           msg: "{{ ansible_python_version }}"
+      loop:
+          - file1.txt
+          - file2.txt
+          - file3.txt
+

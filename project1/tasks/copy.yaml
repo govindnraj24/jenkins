@@ -1,0 +1,5 @@
+---
+- name: copy operation
+  ansible.builtin.copy:
+    src: "{{ ../vars.src }}"
+    dest: "{{ ../vars.dest }}"

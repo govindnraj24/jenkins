@@ -1,0 +1,5 @@
+---
+install: nginx
+operation: install
+src: ../../sample1.html
+dest: /home/ansible/

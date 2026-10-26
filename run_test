@@ -1,0 +1,3 @@
+!# /bin/bash
+
+sudo -u ansible ansible all -i /home/ansible/a_project1/inventory2.yaml -m ping

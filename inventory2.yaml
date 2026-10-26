@@ -1,0 +1,12 @@
+---
+web1:
+  hosts:
+    192.168.0.3
+web2:
+  hosts:
+    192.168.0.4
+
+both:
+  children:
+     web1:
+     web2:

@@ -1,0 +1,11 @@
+worker_process {{ nginx_worker_process | default('auto') }};
+
+{ % for site in sites % }
+
+server{
+         listen {{ % site.port }};
+         server_name {{ site.domain }};
+         root {{ site.root }};
+}
+
+{ % endfor % }
